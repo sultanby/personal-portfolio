@@ -1,3 +1,9 @@
 html {
-    background-color: blueviolet;
+    background-color: #e7dfd5;
+    font-size: 16px;
+}
+
+@font-face {
+    font-family: ActuallyGrotesk;
+    src: url('../fonts/actually_grotesk/ActuallyGrotesk-Regular.otf');
 }
