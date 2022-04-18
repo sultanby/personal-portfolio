@@ -11,16 +11,32 @@
     <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
 </head>
 <body>
-    <div class="container">
-        <img src="/resources/imgs/spiral.png" alt="spiral">
-        <h2 data-splitting>FULL STACK DEVELOPER</h2>
-    </div>
     <header>
-        
+        <div class="header-content">
+            <div class="logo">
+                <a href="index.html" class="logo">YS</a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#about">about</a></li>
+                    <li><a href="#projects">projects</a></li>
+                    <li><a href="#contact">contact</a></li>
+                    <li><a href="#lang">en</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
     <main>
         <section id="welcome">
-
+            <svg viewBox="-10 -10 400 180">
+                <path id="curve" d="M6,150C49.63,93,105.79,36.65,156.2,47.55,207.89,58.74,213,131.91,264,150c40.67,14.43,108.57-6.91,229-145" />
+                <text x="25">
+                    <textPath xlink:href="#curve">
+                    Full stack developer
+                    </textPath>
+                </text>
+            </svg>  
+            <img src="/resources/imgs/spiral.png" alt="spiral">   
         </section>
         <section id="about">
 
