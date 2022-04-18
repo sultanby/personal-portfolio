@@ -65,7 +65,7 @@ header {
 /* Welcome */
 
 #welcome {
-	font-size: 3rem;
+	font-size: 4rem;
 	font-family: ActuallyGrotesk, monospace;
 	text-transform: lowercase;
 }
@@ -73,9 +73,8 @@ header {
 #welcome img {
 	width: 30rem;
 	position: absolute;
-	top: 0rem;
+	top: 5rem;
 	right: 10rem;
-
 }
 
 path {
@@ -84,4 +83,5 @@ path {
   
 text {
 	fill: #FF9800;
+	letter-spacing: 1.2rem;
 }
