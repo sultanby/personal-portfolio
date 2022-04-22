@@ -1,7 +1,9 @@
-html, body {
+html {
     background-color: #e7dfd5;
     font-size: 16px;
 	color: #2d2e3d;
+	font-family: ActuallyGrotesk, monospace;
+	padding: 0px 4rem;
 }
 
 @font-face {
@@ -23,7 +25,7 @@ header {
 .header-content {
     display: flex;
     align-items: center;
-	font-family: ActuallyGrotesk, monospace;
+	
 	font-weight: 600;
 }
 
@@ -66,7 +68,7 @@ header {
 
 #welcome {
 	font-size: 4rem;
-	font-family: ActuallyGrotesk, monospace;
+	
 	text-transform: lowercase;
 }
 
@@ -90,5 +92,20 @@ text {
 
 #about {
 	display: flex;
-	
+	align-items: center;
+}
+
+#about h1 {
+	font-size: 4rem;
+	padding: 2rem;
+	flex: 1 1 150px;
+	text-align: center;
+	line-height: 6rem;
+	text-transform: uppercase;
+}
+
+#about p {
+	font-size: 2rem;
+	padding: 2rem;
+	flex: 1 1 150px;
 }
