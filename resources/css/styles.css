@@ -190,24 +190,22 @@ hr {
 #contact {
 	display: flex;
 	justify-content: space-around;
-	padding: 7rem 0;
+	padding: 10rem 0;
+	font-size: 3rem;
 }
 
 #contact h3{
 	width: 30%;
-	font-size: 3rem;
 	text-align: left;
 }
 
 #contact nav{
 	width: 30%;
-	font-size: 2rem;
 }
 
 #contact nav a{
 	color: inherit;
 	display: inline-block;
-	padding: 1rem;
 }
 
 #contact nav a img{
@@ -215,3 +213,14 @@ hr {
 	vertical-align: middle;
 }
 
+/* footer */
+
+footer {
+	border-top: 1px solid ;
+}
+
+footer p{
+	text-align: center;
+	padding: 1rem 0;
+	font-size: 1rem;
+}
