@@ -25,7 +25,6 @@ header {
 .header-content {
     display: flex;
     align-items: center;
-	
 	font-weight: 600;
 }
 
@@ -185,3 +184,34 @@ hr {
 #jammming{
 	grid-area: 3 / 12 / span 4 / span 4;
 }
+
+/* contact section */
+
+#contact {
+	display: flex;
+	justify-content: space-around;
+	padding: 7rem 0;
+}
+
+#contact h3{
+	width: 30%;
+	font-size: 3rem;
+	text-align: left;
+}
+
+#contact nav{
+	width: 30%;
+	font-size: 2rem;
+}
+
+#contact nav a{
+	color: inherit;
+	display: inline-block;
+	padding: 1rem;
+}
+
+#contact nav a img{
+	width: 2rem;
+	vertical-align: middle;
+}
+
