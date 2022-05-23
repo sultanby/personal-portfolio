@@ -19,13 +19,14 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="#about">about</a></li>
-                    <li><a href="#projects">projects</a></li>
-                    <li><a href="#contact">contact</a></li>
-                    <li><a href="#lang">en</a></li>
+                    <li><a href="#about" id="text-about">about</a></li>
+                    <li><a href="#projects" id="text-projects">projects</a></li>
+                    <li><a href="#contact" id="text-contact">contact</a></li>
+                    <li><a id="en" onclick="changeLang('en')">en</a> |</li>
+                    <li><a id="cz" onclick="changeLang('cz')">cz</a></li>
                 </ul>
             </nav>
-        </div>
+        </div> 
     </header>
     <main>
         <section id="welcome">
@@ -33,16 +34,32 @@
                 <path id="curve"
                     d="M 79.54 220.31 c 84.152 -100.182 202.366 -156.283 298.54 -152.276 c 226.41 30.054 152.275 304.551 512.928 218.395" />
                 <text x="25">
-                    <textPath xlink:href="#curve">
+                    <textPath xlink:href="#curve" id="text-developer">
                         Full stack developer
                     </textPath>
                 </text>
             </svg>
-            <img src="/resources/imgs/spiral.png" alt="spiral">
+            <img id="arch" src="./resources/imgs/arch.png" alt="photo">
+            <img id="spiral" src="/resources/imgs/spiral.png" alt="spiral">
         </section>
+        <div class="container">
+            <div class="scrolling" key="running-line">
+                <span id="text-running">a few words about me</span> <img class='running-img' src="./resources/imgs/4-point-star.png">
+            </div>
+            <div class="scrolling" key="running-line">
+                <span id="text-running">a few words about me</span> <img class='running-img' src="./resources/imgs/4-point-star.png">
+            </div>
+            <div class="scrolling" key="running-line">
+                <span id="text-running">a few words about me</span> <img class='running-img' src="./resources/imgs/4-point-star.png">
+            </div>
+            <div class="scrolling" key="running-line">
+                <span id="text-running">a few words about me</span> <img class='running-img' src="./resources/imgs/4-point-star.png">
+            </div>
+        </div>
         <section id="about">
-            <h1>Hello<br />my name is<br />Yulia</h1>
-            <p>
+            <h1 id="text-greeting">Hello<br />my name is<br />Yulia</h1>
+            <img src="./resources/imgs/green-star.png">
+            <p id="text-about-me">
                 I have a bachelor degree in biomaterials for medical application, there on final year i tried
                 algoritmisation and programming course, excelled on it and came to conclusion about my new direction.
                 After some career attempts and taken online courses i came to conclusion what programming is perfect for
@@ -61,29 +78,29 @@
                     <br>
                     Fullstack developer
                     <br>
-                    Prague
+                    <span id="text-location">Prague</span>
                 </div>
                 <div id="second-column">
                     <div id="background">
                         <hr>
-                        <h3>background</h3>
+                        <h3 id="text-background">background</h3>
                         <div class="cv-event">
                             <div class="year">2013-2017</div>
-                            <div class="cv-body">
+                            <div class="cv-body" id="text-bachelor">
                                 UCT, Prague<br>
                                 Bachelor degree in Biomaterials for medical application
                             </div>
                         </div>
                         <div class="cv-event">
                             <div class="year">2017-2019</div>
-                            <div class="cv-body">
+                            <div class="cv-body" id="text-master">
                                 UCT, Prague<br>
                                 Master program in Bioinformatics
                             </div>
                         </div>
                         <div class="cv-event">
                             <div class="year">2020</div>
-                            <div class="cv-body">
+                            <div class="cv-body" id="text-harvard">
                                 CS50 Harvard online course<br>
                                 CS50web Harvard online course
                             </div>
@@ -99,9 +116,9 @@
                 <div id="third-column">
                     <div id="languages">
                         <hr>
-                        <h3>languages</h3>
+                        <h3 id="text-languages">languages</h3>
                         <div class="cv-event">
-                            <div class="cv-body">
+                            <div class="cv-body" id="text-languages-enumeration">
                                 russian - native <br>
                                 czech - C1 <br>
                                 english - B2 <br>
@@ -109,16 +126,16 @@
                             </div>
                         </div>
                         <hr>
-                        <h3>skills</h3>
+                        <h3 id="text-skills">skills</h3>
                         <div class="cv-event">
                             <div class="cv-body">
                                 HTML5, CSS, JavaScript, React, Git/Github, shell
                             </div>
                         </div>
                         <hr>
-                        <h3>off work</h3>
+                        <h3 id="text-off">off work</h3>
                         <div class="cv-event">
-                            <div class="cv-body">
+                            <div class="cv-body" id="text-hobbies">
                                 table tennis, video editing, painting
                             </div>
                         </div>
@@ -127,7 +144,7 @@
             </div>
         </section>
         <section id="projects">
-            <h3>projects</h3>
+            <h3 id="text-projects">projects</h3>
             <a href="https://sultanby.github.io/fotomatic/" id="fotomatic"><img src="./resources/imgs/fotomatic.png"
                     alt="website shot"></a>
             <a href="https://sultanby.github.io/web3dev/" id="luxdev"><img src="./resources/imgs/luxdev.png"
@@ -142,16 +159,17 @@
                     alt="website shot"></a>
         </section>
         <section id="contact">
-            <h3>feel free to send me a message <i>or let's be social</i></h3>
+            <h3 id="text-message">feel free to send me a message <i>or let's be social</i></h3>
             <nav>
                 <a href="mailto:sultayul@gmail.com">sultayul@gmail.com</a><br>
-                <a href="https://www.linkedin.com/in/yulia-sultanbekova/"><img src="resources/imgs/down-right.png">linkedIn</a><br>
+                <a href="https://www.linkedin.com/in/yulia-sultanbekova/"><img
+                        src="resources/imgs/down-right.png">linkedIn</a><br>
                 <a href="https://twitter.com/jemjasott"><img src="resources/imgs/down-right.png">twitter</a>
-            <nav>
+                <nav>
         </section>
     </main>
     <footer>
-       <p>©Yulia Sultanbekova - 2022</p>
+        <p>©Yulia Sultanbekova - 2022</p>
     </footer>
 </body>
 <script src="resources/js/script.js"></script>
