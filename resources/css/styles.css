@@ -3,13 +3,13 @@ html {
 	font-size: 16px;
 	color: #2d2e3d;
 	font-family: ActuallyGrotesk, monospace;
-	padding: 0px 4rem;
 }
 
 @font-face {
 	font-family: ActuallyGrotesk;
 	src: url('../fonts/actually_grotesk/ActuallyGrotesk-Regular.otf');
 }
+
 
 * {
 	box-sizing: border-box;
@@ -67,26 +67,50 @@ header {
 	cursor: pointer;
 }
 
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+
+}
+
+@media screen and (max-width: 768px) and (min-width: 480px) {
+	.header-content {
+		padding: 1rem 1rem;
+	}
+
+	.logo {
+		font-size: 1.5rem;
+	}
+
+	.header-content ul li {
+		font-size: 1.5rem;
+		padding-left: 0.7rem;
+	}
+}
+
+@media screen and (max-width: 480px) {
+
+}
 
 /* welcome section */
 
 #welcome {
+	position: relative;
 	font-size: 4rem;
 	text-transform: lowercase;
+	padding-bottom: 3rem;
 }
 
 #spiral {
-	width: 30rem;
+	width: 25%;
 	position: absolute;
-	top: 5rem;
-	right: 10rem;
+	top: 8%;
+	right: 10%;
 }
 
 #arch {
 	position: absolute;
-	top: 13rem;
-	left: 27rem;
-	width: 35rem;
+	top: 20%;
+	left: 22%;
+	width: 30%;
 }
 
 path {
@@ -98,6 +122,7 @@ text {
 	letter-spacing: 1.2rem;
 }
 
+
 /*running line*/
 
 .container {
@@ -108,7 +133,7 @@ text {
 
 .scrolling {
 	will-change: transform;
-	font-size: 60px;
+	font-size: 3rem;
 	animation: marquee 30s linear infinite;
 	display: inline-block;
 	padding-right: 10px;
@@ -133,9 +158,43 @@ text {
 	}
 }
 
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+	.scrolling {
+		font-size: 2.5rem;
+	}
+
+	.running-img {
+		width: 2.5rem;
+		padding-bottom: 3px;
+	}
+}
+
+@media screen and (max-width: 768px) and (min-width: 480px) {
+	.scrolling {
+		font-size: 2rem;
+	}
+
+	.running-img {
+		width: 2rem;
+		padding-bottom: 1px;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.scrolling {
+		font-size: 1.2rem;
+	}
+
+	.running-img {
+		width: 1.5rem;
+		padding-bottom: 1px;
+	}
+}
+
 /* about section */
 
 #about {
+	position: relative;
 	display: flex;
 	align-items: center;
 	margin: 7rem;
@@ -148,20 +207,56 @@ text {
 	text-align: center;
 	line-height: 6rem;
 	text-transform: uppercase;
-	z-index: 1;
+	background-image: url('../imgs/green-star.png');
+	background-position: center;
+	background-size: 20rem;
+	background-repeat: no-repeat;
+	background-color: rgba(231,223,213, 0.4);
+	background-blend-mode: lighten;
 }
 
 #about img{
 	position: absolute;
 	width: 25rem;
-	left: 350px;
 	opacity: 0.6;
+	display: none;
 }
 
 #about p {
 	font-size: 2rem;
 	padding: 2rem;
 	flex: 1 1 150px;
+	border: 1px solid black;
+}
+
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+	#about {
+		margin: 2rem;
+		flex-direction: column;
+	}
+}
+
+@media screen and (max-width: 768px) and (min-width: 480px) {
+	#about {
+		margin: 2rem;
+		flex-direction: column;
+	}
+	#about h1 {
+		font-size: 3rem;
+		background-size: 15rem;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	#about {
+		margin: 1.5rem;
+		flex-direction: column;
+	}
+
+	#about h1 {
+		font-size: 2rem;
+		background-size: 15rem;
+	}
 }
 
 /* cv section */
@@ -193,6 +288,32 @@ hr {
 
 .cv-event {
 	padding: 1rem 0;
+}
+
+@media screen and (max-width: 1024px) and (min-width: 769px) {
+	
+}
+
+@media screen and (max-width: 768px) and (min-width: 480px) {
+	#cv-container {
+		flex-direction: column;
+	}
+
+	#first-column {
+		margin: 2rem;
+	}
+
+	#first-column hr{
+		display: none;
+	}
+
+	#second-column, #third-column {
+		padding: 0 2rem;
+	}
+}
+
+@media screen and (max-width: 480px) {
+
 }
 
 /* projects section */
@@ -240,6 +361,84 @@ hr {
 	grid-area: 3 / 12 / span 4 / span 4;
 }
 
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+	#projects {
+		grid-template-columns: repeat(16, 0.5fr);
+		grid-template-rows: repeat(18, 0.5fr);
+	}
+
+	#projects img {
+		height: 12rem;
+		margin: 10px;
+		padding: 3px;
+	}
+
+	#fotomatic {
+		grid-area: 2 / 1 / span 4 / span 4;
+	}
+	
+	#luxdev {
+		grid-area: 7 / 4 / span 4 / span 4;
+	}
+	
+	#guide {
+		grid-area: 13 / 5 / span 4 / span 4;
+	}
+	
+	#tennis {
+		grid-area: 14 / 3 / span 4 / span 4;
+	}
+	
+	#teacozy {
+		grid-area: 8 / 8 / span 4 / span 4;
+	}
+	
+	#jammming {
+		grid-area: 1 / 7 / span 4 / span 4;
+	}
+}
+
+@media screen and (max-width: 768px) and (min-width: 480px) {
+	#projects {
+		grid-template-columns: repeat(16, 0.5fr);
+		grid-template-rows: repeat(18, 0.5fr);
+	}
+
+	#projects img {
+		height: 6rem;
+		margin: 10px;
+		padding: 3px;
+	}
+
+	#fotomatic {
+		grid-area: 2 / 1 / span 4 / span 4;
+	}
+	
+	#luxdev {
+		grid-area: 7 / 4 / span 4 / span 4;
+	}
+	
+	#guide {
+		grid-area: 13 / 5 / span 4 / span 4;
+	}
+	
+	#tennis {
+		grid-area: 14 / 3 / span 4 / span 4;
+	}
+	
+	#teacozy {
+		grid-area: 8 / 8 / span 4 / span 4;
+	}
+	
+	#jammming {
+		grid-area: 1 / 7 / span 4 / span 4;
+	}
+}
+
+@media screen and (max-width: 480px) {
+
+}
+
 /* contact section */
 
 #contact {
@@ -266,6 +465,24 @@ hr {
 #contact nav a img {
 	width: 2rem;
 	vertical-align: middle;
+}
+
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+	#contact {
+		padding: 5rem 0;
+		font-size: 1.5rem;
+	}
+}
+
+@media screen and (max-width: 768px) and (min-width: 480px) {
+	#contact {
+		padding: 2rem 0;
+		font-size: 1rem;
+	}
+}
+
+@media screen and (max-width: 480px) {
+
 }
 
 /* footer */
