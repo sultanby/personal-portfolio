@@ -61,6 +61,12 @@ header {
 	text-decoration-color: #252e55;
 }
 
+.header-content ul li:visited {
+	text-decoration: underline;
+	text-decoration-color: #252e55;
+	cursor: pointer;
+}
+
 .header-content ul li:hover {
 	text-decoration: underline;
 	text-decoration-color: #252e55;
