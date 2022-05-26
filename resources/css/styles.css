@@ -67,10 +67,6 @@ header {
 	cursor: pointer;
 }
 
-@media screen and (max-width: 1024px) and (min-width: 768px) {
-
-}
-
 @media screen and (max-width: 768px) and (min-width: 480px) {
 	.header-content {
 		padding: 1rem 1rem;
@@ -87,7 +83,33 @@ header {
 }
 
 @media screen and (max-width: 480px) {
+	.logo {
+		font-size: 1.5rem;
+	}
 
+	.header-content {
+		padding: 1rem 0rem;
+	}
+
+	.header-content ul li {
+		font-size: 1.5rem;
+		padding-left: 1rem;
+	}
+}
+
+@media screen and (max-width: 420px) {
+	.logo {
+		font-size: 1rem;
+	}
+
+	.header-content {
+		padding: 1rem 0rem;
+	}
+
+	.header-content ul li {
+		font-size: 1rem;
+		padding-left: 1rem;
+	}
 }
 
 /* welcome section */
@@ -120,6 +142,12 @@ path {
 text {
 	fill: #FF9800;
 	letter-spacing: 1.2rem;
+}
+
+@media screen and (max-width: 480px) {
+	#welcome {
+		padding-bottom: 1rem;
+	}
 }
 
 
@@ -259,11 +287,29 @@ text {
 	}
 }
 
+@media screen and (max-width: 425px) {
+	#about {
+		margin: 1.5rem;
+		flex-direction: column;
+	}
+
+	#about h1 {
+		font-size: 1.5rem;
+		background-size: 10rem;
+		line-height: 2rem;
+	}
+
+	#about p {
+		font-size: 1.5rem;
+	}
+}
+
+
 /* cv section */
 
 #cv-container {
 	display: flex;
-	width: 100%;
+	width: 100vw;
 	font-size: 2rem;
 	gap: 5%;
 }
@@ -280,7 +326,7 @@ text {
 #third-column {
 	flex: 2 1 30%;
 }
-
+ 
 hr {
 	border: 2px solid #252e55;
 	border-radius: 2px;
@@ -290,17 +336,14 @@ hr {
 	padding: 1rem 0;
 }
 
-@media screen and (max-width: 1024px) and (min-width: 769px) {
-	
-}
-
-@media screen and (max-width: 768px) and (min-width: 480px) {
+@media screen and (max-width: 1023px)  {
 	#cv-container {
 		flex-direction: column;
 	}
 
 	#first-column {
 		margin: 2rem;
+		text-align: center;
 	}
 
 	#first-column hr{
@@ -308,12 +351,18 @@ hr {
 	}
 
 	#second-column, #third-column {
-		padding: 0 2rem;
+		padding: 0rem 2rem;
+	}
+
+	#third-column {
+		padding-bottom: 2rem;
 	}
 }
 
-@media screen and (max-width: 480px) {
-
+@media screen and (max-width: 425px) {
+	#cv-container {
+		font-size: 1.5rem;
+	}
 }
 
 /* projects section */
@@ -321,18 +370,18 @@ hr {
 #projects {
 	display: grid;
 	grid-template-columns: repeat(18, 0.5fr);
-	grid-template-rows: repeat(10, 0.5fr);
+	grid-template-rows: repeat(13, 0.5fr);
 }
 
 #projects h3 {
 	font-size: 4rem;
-	grid-area: 6 / 8 / span 1 / span 5;
+	grid-area: 6 / 7 / span 1 / span 5;
 	z-index: 1;
 }
 
 #projects img {
 	height: 15rem;
-	margin: 50px;
+	margin: 20px;
 	padding: 3px;
 	box-shadow: #252e55 0px 0px 0px 3px inset, greenyellow -20px 20px 0px 0px, #252e55 -20px 20px 0 3px;
 }
@@ -346,43 +395,48 @@ hr {
 }
 
 #guide {
-	grid-area: 7 / 7 / span 4 / span 4;
+	grid-area: 9 / 7 / span 4 / span 4;
 }
 
 #tennis {
-	grid-area: 6 / 1 / span 4 / span 4;
+	grid-area: 8 / 1 / span 4 / span 4;
 }
 
 #teacozy {
-	grid-area: 5 / 11 / span 4 / span 4;
+	grid-area: 7 / 10 / span 4 / span 4;
 }
 
 #jammming {
-	grid-area: 3 / 12 / span 4 / span 4;
+	grid-area: 3 / 11 / span 4 / span 4;
 }
 
 @media screen and (max-width: 1024px) and (min-width: 768px) {
 	#projects {
-		grid-template-columns: repeat(16, 0.5fr);
+		grid-template-columns: repeat(15, 0.5fr);
 		grid-template-rows: repeat(18, 0.5fr);
+	}
+
+	#projects h3 {
+		font-size: 3rem;
+		grid-area: 6 / 9 / span 1 / span 5;
 	}
 
 	#projects img {
 		height: 12rem;
-		margin: 10px;
+		margin: 0px;
 		padding: 3px;
 	}
 
 	#fotomatic {
-		grid-area: 2 / 1 / span 4 / span 4;
+		grid-area: 2 / 2 / span 4 / span 4;
 	}
 	
 	#luxdev {
-		grid-area: 7 / 4 / span 4 / span 4;
+		grid-area: span 5 / span 5 / 12 / 13;
 	}
 	
 	#guide {
-		grid-area: 13 / 5 / span 4 / span 4;
+		grid-area: 12 / 5 / span 4 / span 4;
 	}
 	
 	#tennis {
@@ -390,53 +444,64 @@ hr {
 	}
 	
 	#teacozy {
-		grid-area: 8 / 8 / span 4 / span 4;
+		grid-area: span 4 / span 4 / 13 / 11;
 	}
 	
 	#jammming {
-		grid-area: 1 / 7 / span 4 / span 4;
+		grid-area: 1 / 6 / span 4 / span 4;
 	}
 }
 
-@media screen and (max-width: 768px) and (min-width: 480px) {
+@media screen and (max-width: 768px) {
 	#projects {
-		grid-template-columns: repeat(16, 0.5fr);
-		grid-template-rows: repeat(18, 0.5fr);
+		grid-template-columns: repeat(8, 0.5fr);
+		grid-template-rows: repeat(25, 0.5fr);
+	}
+
+	#projects h3 {
+		font-size: 2.5rem;
+		grid-area: 1 / 6 / span 1 / span 5;
 	}
 
 	#projects img {
-		height: 6rem;
-		margin: 10px;
+		height: 9em;
+		margin: 0px;
 		padding: 3px;
 	}
 
 	#fotomatic {
-		grid-area: 2 / 1 / span 4 / span 4;
+		grid-area: 3 / 2 / span 4 / span 4;
 	}
 	
 	#luxdev {
-		grid-area: 7 / 4 / span 4 / span 4;
+		grid-area: 6 / 3 / span 4 / span 4;
 	}
 	
 	#guide {
-		grid-area: 13 / 5 / span 4 / span 4;
+		grid-area: 17 / 2 / span 4 / span 4;
 	}
 	
 	#tennis {
-		grid-area: 14 / 3 / span 4 / span 4;
+		grid-area: 20 / 3 / span 4 / span 4;
 	}
 	
 	#teacozy {
-		grid-area: 8 / 8 / span 4 / span 4;
+		grid-area: 13 / 3 / span 4 / span 4;
 	}
 	
 	#jammming {
-		grid-area: 1 / 7 / span 4 / span 4;
+		grid-area: 9 / 2 / span 4 / span 4;
 	}
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 425px) {
+	#projects img {
+		height: 7em;
+	}
 
+	#projects h3 {
+		font-size: 2rem;
+	}
 }
 
 /* contact section */
@@ -444,7 +509,7 @@ hr {
 #contact {
 	display: flex;
 	justify-content: space-around;
-	padding: 10rem 0;
+	padding: 5rem 0;
 	font-size: 3rem;
 }
 
@@ -469,21 +534,34 @@ hr {
 
 @media screen and (max-width: 1024px) and (min-width: 768px) {
 	#contact {
-		padding: 5rem 0;
+		font-size: 2rem;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	#contact {
+		padding: 2rem 0rem;
+		font-size: 2rem;
+		gap: 2rem;
+	}
+	#contact h3 {
+		width: 60%;
+		padding-bottom: 2rem;
+	}
+
+	#contact nav {
+		width: 60%;
+	}
+}
+
+@media screen and (max-width: 425px) {
+	#contact {
+		flex-direction: column;
+		align-items: flex-start;
 		font-size: 1.5rem;
 	}
 }
 
-@media screen and (max-width: 768px) and (min-width: 480px) {
-	#contact {
-		padding: 2rem 0;
-		font-size: 1rem;
-	}
-}
-
-@media screen and (max-width: 480px) {
-
-}
 
 /* footer */
 
@@ -493,6 +571,13 @@ footer {
 
 footer p {
 	text-align: center;
-	padding: 1rem 0;
-	font-size: 1rem;
+	padding: 1.5rem 0;
+	font-size: 1.5rem;
+}
+
+@media screen and (max-width: 425px) {
+	footer p {
+		padding: 1rem 0;
+		font-size: 1rem;
+	}
 }
